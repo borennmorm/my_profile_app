@@ -50,117 +50,104 @@ class MyApp extends StatelessWidget {
                       "Programmer",
                       style: TextStyle(fontSize: 18),
                     ),
-                    const SizedBox(
-                        height: 10), // Add space between text and button
+                    const SizedBox(height: 20),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        ElevatedButton.icon(
-                          icon: const FaIcon(FontAwesomeIcons.github),
-                          onPressed: () async {
-                            var url =
-                                Uri.https('https://github.com/borinmorm21');
-                            if (await canLaunchUrl(url)) {
-                              await launchUrl(url);
-                            }
-                            print('Button clicked');
-                          },
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton.icon(
+                            icon: const FaIcon(FontAwesomeIcons.github),
+                            onPressed: () async {
+                              var url =
+                                  Uri.parse('https://github.com/borinmorm21');
+                              if (await canLaunchUrl(url)) {
+                                await launchUrl(url);
+                              }
+                              print('GitHub Button clicked');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50),
                               ),
+                              padding: const EdgeInsets.symmetric(vertical: 15),
+                              backgroundColor: Colors.blueAccent,
+                              foregroundColor: Colors.white,
                             ),
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.blueAccent),
-                            foregroundColor:
-                                MaterialStateProperty.all(Colors.white),
-                            padding: MaterialStateProperty.all(
-                              const EdgeInsets.symmetric(
-                                  vertical: 15, horizontal: 50),
-                            ),
-                          ),
-                          label: const Text(
-                            "GitHub",
+                            label: const Text("GitHub"),
                           ),
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        ElevatedButton.icon(
-                          icon: const FaIcon(FontAwesomeIcons.youtube),
-                          onPressed: () {},
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
+                        const SizedBox(height: 10),
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton.icon(
+                            icon: const FaIcon(FontAwesomeIcons.youtube),
+                            onPressed: () async {
+                              var url = Uri.parse(
+                                  'https://youtube.com/@iambenro_official?si=w39ZSMED2BTAYacw');
+                              if (await canLaunchUrl(url)) {
+                                await launchUrl(url);
+                              }
+                              print('YouTube Button clicked');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50),
                               ),
+                              padding: const EdgeInsets.symmetric(vertical: 15),
+                              backgroundColor: Colors.blueAccent,
+                              foregroundColor: Colors.white,
                             ),
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.blueAccent),
-                            foregroundColor:
-                                MaterialStateProperty.all(Colors.white),
-                            padding: MaterialStateProperty.all(
-                              const EdgeInsets.symmetric(
-                                  vertical: 15, horizontal: 50),
-                            ),
-                          ),
-                          label: const Text(
-                            "Youtube",
+                            label: const Text("YouTube"),
                           ),
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        ElevatedButton.icon(
-                          icon: const FaIcon(FontAwesomeIcons.tiktok),
-                          onPressed: () {},
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
+                        const SizedBox(height: 10),
+                        SizedBox(
+                          width: double
+                              .infinity, // Make the SizedBox take the full width
+                          child: ElevatedButton.icon(
+                            icon: const FaIcon(FontAwesomeIcons.tiktok),
+                            onPressed: () async {
+                              var url = Uri.parse(
+                                  'https://www.tiktok.com/@iambenro_officail');
+                              if (await canLaunchUrl(url)) {
+                                await launchUrl(url);
+                              }
+                              print('TikTok Button clicked');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50),
                               ),
+                              padding: const EdgeInsets.symmetric(vertical: 15),
+                              backgroundColor: Colors.blueAccent,
+                              foregroundColor: Colors.white,
                             ),
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.blueAccent),
-                            foregroundColor:
-                                MaterialStateProperty.all(Colors.white),
-                            padding: MaterialStateProperty.all(
-                              const EdgeInsets.symmetric(
-                                  vertical: 15, horizontal: 50),
-                            ),
-                          ),
-                          label: const Text(
-                            "TikTok",
+                            label: const Text("TikTok"),
                           ),
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        ElevatedButton.icon(
-                          icon: const FaIcon(FontAwesomeIcons.telegram),
-                          onPressed: () {},
-                          style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(
-                              RoundedRectangleBorder(
+                        const SizedBox(height: 10),
+                        SizedBox(
+                          width: double
+                              .infinity, // Make the SizedBox take the full width
+                          child: ElevatedButton.icon(
+                            icon: const FaIcon(FontAwesomeIcons.telegram),
+                            onPressed: () async {
+                              var url = Uri.parse('https://t.me/borin_morm');
+                              if (await canLaunchUrl(url)) {
+                                await launchUrl(url);
+                              }
+                              print('Telegram Button clicked');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(50),
                               ),
+                              padding: const EdgeInsets.symmetric(vertical: 15),
+                              backgroundColor: Colors.blueAccent,
+                              foregroundColor: Colors.white,
                             ),
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.blueAccent),
-                            foregroundColor:
-                                MaterialStateProperty.all(Colors.white),
-                            padding: MaterialStateProperty.all(
-                              const EdgeInsets.symmetric(
-                                  vertical: 15, horizontal: 50),
-                            ),
-                          ),
-                          label: const Text(
-                            "Telegram",
+                            label: const Text("Telegram"),
                           ),
                         ),
                       ],
@@ -170,6 +157,37 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ],
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: const EdgeInsets.all(0),
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blueAccent,
+                ),
+                child: UserAccountsDrawerHeader(
+                  decoration: BoxDecoration(color: Colors.blueAccent),
+                  accountName: Text(
+                    "Borin Morm",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  accountEmail: Text("borin.morm@gmail.com"),
+                  currentAccountPictureSize: Size.square(50),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/profile.jpg"),
+                  ),
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.person),
+                title: const Text('My Profile'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
